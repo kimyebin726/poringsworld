@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>작품보기 - 빛나는 아이</title>
+
+  <!-- Pretendard -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #000;
+      color: #fff;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* 🔙 상단 고정 버튼 */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 999;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* 이미지 래퍼 */
+    .wrap {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-top: 80px; /* 버튼 가리지 않게 */
+    }
+
+    .wrap img {
+      width: 100%;
+      height: auto;      /* ✅ 비율 그대로 */
+      display: block;    /* ✅ 겹침 방지 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🔙 처음으로 돌아가기 -->
+  <button class="back-btn" onclick="goHome()">← 처음으로</button>
+
+  <!-- 작품 이미지 -->
+  <div class="wrap">
+    <img src="in1.jpg" alt="작품 1" />
+    <img src="in2.jpg" alt="작품 2" />
+    <img src="in3.jpg" alt="작품 3" />
+    <img src="in4.jpg" alt="작품 4" />
+
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "porings.html";
+    }
+  </script>
+
+</body>
+</html>
